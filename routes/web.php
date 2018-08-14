@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/user-profiles', function () {
     return view('userprofiles');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
