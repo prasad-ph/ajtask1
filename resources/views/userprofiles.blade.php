@@ -24,30 +24,16 @@
             </thead>
             <tbody>
 
+                @foreach ($users as $user)
                 <tr>
-                    <td>Deep Mallick</td>
-                    <td> pushpa.jhaveri@yahoo.com</td>
-                    <td>73</td>
-                    <td> 2009-09-12</td>
+                    <td> {{$user->name}} </td>
+                    <td> {{$user->email}} </td>
+                    <td> {{$user->profile->age}} </td>
+                    <td> {{$user->profile->dob}} </td>
                 </tr>
-                                <tr>
-                    <td>Pranay Bhai Salvi</td>
-                    <td> aarti.bhargava@apte.com</td>
-                    <td>41</td>
-                    <td>2011-11-23</td>
-                </tr>
-                <tr>
-                    <td>Owais Kumar Soman</td>
-                    <td> idoctor@mody.com</td>
-                    <td>23</td>
-                    <td>1985-10-08</td>
-                </tr>
-                <tr>
-                    <td>Brock Peri</td>
-                    <td> pushpa.jhaveri@yahoo.com</td>
-                    <td>96</td>
-                    <td>1937-10-26</td>
-                </tr>
+
+                @endforeach
+
             </tbody>
 
         </table>

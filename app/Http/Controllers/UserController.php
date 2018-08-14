@@ -19,7 +19,21 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         return view('user.profile', [
             'user' => $user,
-            'profile' => Profile::findOrFail($id),
+        ]
+        );
+    }
+
+    /**
+     * Show the profiles list.
+     *
+     * @param  @null
+     * @return Response
+     */
+    public function all()
+    {
+        $users = User::all();
+        return view('userprofiles', [
+            'users' => $users,
         ]
         );
     }
