@@ -8,35 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>User Profiles</title>
+    <title>User Profile</title>
   </head>
   <body>
     <div class="container">
-        <h1>User Profiles</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Age</th>
-                    <th>DOB</th>
-                </tr>
-            </thead>
-            <tbody>
+        <h1>User Profile</h1>
 
-                @foreach ($users as $user)
-                <tr>
-                    <td> {{$user->name}} </td>
-                    <td> {{$user->email}} </td>
-                    <td> {{$user->profile->age}} </td>
-                    <td> {{$user->profile->dob}} </td>
-                </tr>
+        <div>Name {{ $user->name }}</div>
+        <div>Email {{ $user->email }}</div>
+        <div>DOB {{ $user->profile->dob }}</div>
+        <div>Age {{ $user->profile->age }}</div>
 
-                @endforeach
-
-            </tbody>
-
-        </table>
     </div>
 
     <!-- Optional JavaScript -->
